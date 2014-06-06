@@ -1,0 +1,9 @@
+<div id="newPage">
+  <h3>What's New</h3>
+  <p>This is the place that I will post new things added to this site. Things like new songs, new links, new MP3 tracks, new arrangements, etc.</p>
+
+  <div class="item" ng-repeat="new in news">
+    <img src="img/bullet.png">
+    {{new.date | date:'MMMM dd, yyyy'}} - {{new.item}}
+  </div>
+</div>

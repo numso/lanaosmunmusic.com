@@ -1,0 +1,11 @@
+<div id="listPage">
+  <h3>Song List</h3>
+
+  <select ng-model="sortBy" ng-options="sort.label for sort in sortings"></select>
+
+  <div class="list">
+    <div class="song" ng-click="goto(song)" ng-repeat="song in songs | filter:filterSongs">
+      <a>{{song.name}}</a>
+    </div>
+  </div>
+</div>
