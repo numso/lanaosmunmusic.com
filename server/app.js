@@ -1,19 +1,19 @@
 /* jshint node:true */
-var       fs = require('fs'),
-     express = require('express'),
-      stylus = require('stylus');
+'use strict';
+
+var      fs = require('fs');
+var express = require('express');
+var  stylus = require('stylus');
 
 var app = express();
 app.set('port', process.env.PORT || 3000);
 
 var sessOptions = {
-  key: 'angular-app.sid',
-  secret: 'my secret'
+  key: 'osmunmusic.sid',
+  secret: '%9k9tt0^pw{r#yc2)a\\!$actteh4=/k8y\\0966(@i|p|rl6]uc'
 };
 
 var devConfig = function () {
-  'use strict';
-
   app.use(express.favicon());
   app.use(stylus.middleware({
     debug: true,
@@ -32,33 +32,23 @@ var devConfig = function () {
 app.configure('development', devConfig);
 app.configure('localdev', devConfig);
 
-var prodConfig = function () {
-  'use strict';
+// var prodConfig = function () {
+//   app.use(express.favicon());
+//   app.use(express.static('build'));
+//   app.use(express.logger('dev'));
+//   app.use(express.bodyParser());
+//   app.use(express.methodOverride());
+//   app.use(express.cookieParser());
+//   app.use(express.session(sessOptions));
+//   app.use(app.router);
+// };
+app.configure('staging', devConfig);
+app.configure('production', devConfig);
 
-  app.use(express.favicon());
-  app.use(express.static('build'));
-  app.use(express.logger('dev'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(express.cookieParser());
-  app.use(express.session(sessOptions));
-  app.use(app.router);
-};
-app.configure('staging', prodConfig);
-app.configure('production', prodConfig);
+fs.readdirSync(__dirname + '/routes').forEach(function (file) {
+  require('./routes/' + file)(app);
+});
 
-fs.readdirSync(__dirname + '/routes').forEach(
-  function (file) {
-    'use strict';
-
-    require('./routes/' + file)(app);
-  }
-);
-
-app.listen(app.get('port'),
-  function () {
-    'use strict';
-
-    console.log('Express server listening on port ' + app.get('port') + ' in environment ' + app.get('env'));
-  }
-);
+app.listen(app.get('port'), function () {
+  console.log('Express server listening on port ' + app.get('port') + ' in environment ' + app.get('env'));
+});
