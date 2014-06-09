@@ -6,6 +6,9 @@ angular.module('lana').factory('songs',
       {
         name: 'Adam\'s Song',
         info: 'This song was written for my brother Adam when he went on his mission to Cordoba Argentina. This is the first song I wrote. I was actually trying to write a talk for his farewell and ended up writing this song. I surprised him at his farewell by sing instead of talking.',
+        cat: {
+          youth: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -46,6 +49,10 @@ angular.module('lana').factory('songs',
       {
         name: 'Awesome Dad',
         info: 'I was asked to write a new Father\'s Day song for our primary to sing. It made our bishop cry.',
+        cat: {
+          child: true,
+          youth: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -81,6 +88,10 @@ angular.module('lana').factory('songs',
       {
         name: 'Born is the Child',
         info: 'I was supposed to sing a song at a Christmas party. I didn\'t have anything to sing so I wrote this song. Originally it had two verses. When my girls sang this song in sacrament meeting last Christmas, I wrote a third verse so that each girl could have a verse to sing, they sang the chorus together.',
+        cat: {
+          child: true,
+          christmas: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -139,6 +150,8 @@ angular.module('lana').factory('songs',
       {
         name: 'Candle in the Night',
         info: 'I took a song writing class at BYU. This song was written for my assignment for this class. It was sung at an end of term recital.',
+        cat: {
+        },
         meta: {
           img: true,
           mp3: true,
@@ -189,6 +202,11 @@ angular.module('lana').factory('songs',
       {
         name: 'Daughter of a King',
         info: 'This is a song written for young women\'s girls camp. The theme for girls camp was "a daughter of a king" and the stake young women\'s president asked me to write a song to go with the theme. This is my daughter Saige\'s favorite song.',
+        cat: {
+          child: true,
+          youth: true,
+          women: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -231,6 +249,9 @@ angular.module('lana').factory('songs',
       {
         name: 'Daughter of Heaven',
         info: 'I wrote this song to go along with an enrichment night. The theme was: the many hats that women wear. We had skits, poems, songs, etc. that went along with the different "hats" such as a mother hat, a teacher hat, a taxi driver hat and so on. This song went with the Daughter of God hat.',
+        cat: {
+          women: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -278,6 +299,10 @@ angular.module('lana').factory('songs',
       {
         name: 'Fly with the Eagles',
         info: 'I wrote this song for Dallin\'s eagle court of honor. My three daughters Jerrica, Sierra, and Saige sang it. Jerrica sang the first verse, Sierra sang the second verse, they sang the third verse and the chorus all together and Saige sang the very ending by herself. She was 6 years old and it was so cute! I really like the words in the chorus.',
+        cat: {
+          child: true,
+          youth: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -315,6 +340,9 @@ angular.module('lana').factory('songs',
       {
         name: 'Greg\'s Song',
         info: 'I wrote this song for my brother Greg when he went on his mission to Venezuela. I sang it at his farewell.',
+        cat: {
+          youth: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -362,6 +390,9 @@ angular.module('lana').factory('songs',
       {
         name: 'Holy Ghost Speaks to a Child',
         info: 'This song was written for primary while I was chorister. I wanted a song about the Holy Ghost that sounded pretty and sweet.',
+        cat: {
+          child: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -391,6 +422,11 @@ angular.module('lana').factory('songs',
       {
         name: 'I Have a Friend Called Jesus',
         info: 'I wrote this song for the primary while I was serving as the primary chorister.  This song was written for the primary presentation. I told the kids that this song can be repeated and go on and on just like Jesus\' love goes on and on.',
+        cat: {
+          child: true,
+          christmas: true,
+          youth: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -420,6 +456,12 @@ angular.module('lana').factory('songs',
       {
         name: 'I Wonder Duet',
         info: 'A friend called and told me that her children were asked to sing in Sacrament meeting. THey wanted a different version of this song so I wrote this duet for them to sing.',
+        cat: {
+          child: true,
+          youth: true,
+          women: true,
+          duet: true
+        },
         meta: {
           img: true,
           mp3: false,
@@ -455,6 +497,9 @@ angular.module('lana').factory('songs',
       {
         name: 'Josh\'s Song',
         info: 'This song was written for my brother Josh when he went on his mission to Spain. This song was harder to write because I was pregnant and sick with twins and because I wanted it to be really good for Josh. I sang this song at his farewell and then he got up and sang a song that he wrote. Totally cool.',
+        cat: {
+          youth: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -492,6 +537,11 @@ angular.module('lana').factory('songs',
       {
         name: 'Let Him In',
         info: 'This song was written for a Christmas program. It\'s a duet. I wrote it to sing with a girl in my ward who can sing very high. This song is very fun to sing.',
+        cat: {
+          christmas: true,
+          women: true,
+          duet: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -568,6 +618,10 @@ angular.module('lana').factory('songs',
       {
         name: 'Miracle of Christmas',
         info: 'I wrote this song for the primary to sing for Christmas while  I was serving as the primary chorister.',
+        cat: {
+          child: true,
+          christmas: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -602,6 +656,9 @@ angular.module('lana').factory('songs',
       {
         name: 'My Baptism Day',
         info: 'The day my daughter Jerrica was being baptized, there were 6 children being baptized that same day all from our ward. I wrote this song and they all sang it at the baptism.',
+        cat: {
+          child: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -632,6 +689,12 @@ angular.module('lana').factory('songs',
       {
         name: 'Path of the Shepherd',
         info: 'This song was written for a relief society lesson. A friend of mine was teaching the lesson which was about church leaders, specifically the bishop. It was also December.  She wanted a song about the bishop and about Christmas. When sung for her lesson the word prophet in the second verse was replaced with the word Bishop.',
+        cat: {
+          child: true,
+          christmas: true,
+          youth: true,
+          women: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -673,6 +736,12 @@ angular.module('lana').factory('songs',
       {
         name: 'Peace is a Feeling',
         info: 'This song was written for the primary presentation. The theme was "I can feel peace" and the 11 yr old girls sang it for the program.',
+        cat: {
+          child: true,
+          christmas: true,
+          youth: true,
+          women: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -706,6 +775,11 @@ angular.module('lana').factory('songs',
       {
         name: 'Samuel (Baby Jesus Duet)',
         info: 'Some very close friends were singing this song in sacrament meeting. I wrote this duet for their family to sing.',
+        cat: {
+          child: true,
+          christmas: true,
+          duet: true
+        },
         meta: {
           img: true,
           mp3: false,
@@ -748,6 +822,11 @@ angular.module('lana').factory('songs',
       {
         name: 'Silent Night Duet',
         info: 'I wrote this song when my friend was a ward choir director wanted a song for the primary to sing as a duet with the ward choir. The ward choir sang silent night and the primary sang my duet part.',
+        cat: {
+          child: true,
+          christmas: true,
+          duet: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -783,6 +862,10 @@ angular.module('lana').factory('songs',
       {
         name: 'The Living Christ',
         info: 'My stake young women\'s president wanted the girls in our stake to all memorize The Living Christ. She asked me to try to write music to go along with the words to help them memorize it. I didn\'t think that I could do it. It was very difficult, as I couldn\'t change any of the words to go along with the music. It was also very long and had no meter or rhythm. It took me 6 months to write this song but I felt very inspired as I wrote it.',
+        cat: {
+          youth: true,
+          women: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -991,6 +1074,11 @@ angular.module('lana').factory('songs',
       {
         name: 'True to the Faith',
         info: 'This was written for the youth in my stake.  Every stake in Utah was asked to put on some sort of a program commemorating the life of Joseph Smith, using the youth for the program. Each ward did a ward level program and the stake chose different parts of each ward program to create a stake program.  The stake asked me to write a song for the youth of our stake to sing and this is the song I wrote.',
+        cat: {
+          child: true,
+          youth: true,
+          women: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -1029,6 +1117,11 @@ angular.module('lana').factory('songs',
       {
         name: 'When I Kneel',
         info: 'I remember writing this song. It wasn\'t for any particular reason. Just cuz.',
+        cat: {
+          child: true,
+          youth: true,
+          women: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -1078,6 +1171,10 @@ angular.module('lana').factory('songs',
       {
         name: 'Where He Walks',
         info: 'My friend Anjannette Olsen asked me to write a song using the words to a poem written by her late grandmother. This is the song.  I wrote the music and the words are written by Marjorie Wax.',
+        cat: {
+          youth: true,
+          women: true
+        },
         meta: {
           img: true,
           mp3: true,
@@ -1120,6 +1217,10 @@ angular.module('lana').factory('songs',
       {
         name: 'Written in my Heart',
         info: 'I was asked to write a song to go along with a play for the church drama competition. It\'s an excellent play. I\'ll try to get a link.',
+        cat: {
+          youth: true,
+          women: true
+        },
         meta: {
           img: true,
           mp3: false,
