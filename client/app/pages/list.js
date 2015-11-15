@@ -7,6 +7,11 @@ import categories from '../data/categories'
 import allSongs from '../data/songs'
 import styles from './list.styl'
 
+type LinkState<T> = {
+  requestChange: (val: T) => void;
+  value: T;
+};
+
 export default class List extends Component {
 
   displayName: 'List';
@@ -20,9 +25,13 @@ export default class List extends Component {
     }
   }
 
-  link(key) {
+  link(key: string): LinkState<string> {
     return {
-      requestChange: val => this.setState({[key]: val}),
+      requestChange: val => {
+        var newState = {}
+        newState[key] = val
+        this.setState(newState)
+      },
       value: this.state[key]
     }
   }

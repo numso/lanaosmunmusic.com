@@ -1,21 +1,30 @@
 /* @flow */
 
 import {find, map} from 'lodash'
-import React, {Component} from 'react'
+import React, {Component, PropTypes} from 'react'
 
+import DefaultImg from '../common/default-img'
 import songs from '../data/songs'
 import styles from './song.styl'
+
+type Props = {
+  params: {
+    id: string;
+  };
+};
 
 export default class Song extends Component {
 
   displayName: 'Song';
 
-  constructor(props) {
+  props: Props;
+
+  constructor(props: Props) {
     super(props)
     this.state = find(songs, {id: props.params.id}) || {}
   }
 
-  download(url) {
+  download(url: string) {
     window.open(url, '_blank')
   }
 
@@ -50,7 +59,7 @@ export default class Song extends Component {
             children="Sheet Music SATB"
           />
         </div>
-        {meta.img && <img src={`img/songs/${id}.png`}/>}
+        {meta.img && <DefaultImg src={`img/songs/${id}.png`}/>}
         <div className={styles.info}>{info}</div>
         <div className={styles.title}>{name}</div>
         {map(lyrics, verse => (
@@ -62,4 +71,8 @@ export default class Song extends Component {
     )
   }
 
+}
+
+Song.propTypes = {
+  params: PropTypes.object.isRequired
 }
