@@ -1,0 +1,6 @@
+[ignore]
+.*/node_modules/react/.*
+
+[options]
+suppress_comment=.*\\$FlowIssue
+module.name_mapper='.*\.styl' -> 'empty/object'

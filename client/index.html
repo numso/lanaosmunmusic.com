@@ -2,58 +2,11 @@
 <html>
   <head>
     <title>Lana Osmun Music</title>
-    <!-- ref:css css/<%= appName %>.min.css -->
     <link rel="stylesheet" href="css/lib/bootstrap-btn.css">
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/app.css">
-    <!-- endref -->
   </head>
   <body>
-
-    <div id="container">
-      <div header id="header"></div>
-      <div ui-view id="view"></div>
-      <div footer id="footer"></div>
-    </div>
-
-    <!-- Libraries -->
-    <script src="js/lib/d3.js"></script>
-    <script src="js/lib/jquery.js"></script>
-    <script src="js/lib/moment.js"></script>
-    <script src="js/lib/underscore.js"></script>
-    <script src="js/lib/angular.js"></script>
-    <script src="js/lib/ui-bootstrap.js"></script>
-    <script src="js/lib/ui-router.js"></script>
-
-    <!-- Module -->
-    <script src="js/module.js"></script>
-
-    <!-- Controllers -->
-    <script src="js/app/controller/header.js"></script>
-    <script src="js/app/controller/footer.js"></script>
-
-    <script src="js/app/controller/main.js"></script>
-    <script src="js/app/controller/list.js"></script>
-    <script src="js/app/controller/new.js"></script>
-    <script src="js/app/controller/about.js"></script>
-    <script src="js/app/controller/faq.js"></script>
-    <script src="js/app/controller/contact.js"></script>
-
-    <script src="js/app/controller/song.js"></script>
-
-    <!-- Directives -->
-    <script src="js/app/directive/header.js"></script>
-    <script src="js/app/directive/footer.js"></script>
-
-    <!-- Services -->
-    <script src="js/app/service/navigation.js"></script>
-    <script src="js/app/service/songs.js"></script>
-    <script src="js/app/service/news.js"></script>
-
-    <!-- Filters -->
-
-    <!-- Main -->
-    <script src="js/main.js"></script>
-
+    <div id="app"></div>
+    <script src="build/bundle.js"></script>
   </body>
 </html>
