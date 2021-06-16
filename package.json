@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server -h",
-    "test": "flow && eslint client server && echo \"\\033[32mWe Good!\\033[0m\""
+    "build": "webpack",
+    "test": "eslint client server && echo \"\\033[32mWe Good!\\033[0m\""
   },
   "engines": {
-    "node": "4.2.2"
+    "node": "16"
   },
   "author": "Dallin Osmun",
   "dependencies": {
@@ -21,7 +22,6 @@
     "empty": "0.10.1",
     "eslint": "1.7.1",
     "eslint-plugin-react": "3.5.1",
-    "flow-bin": "0.18.1",
     "history": "1.12.5",
     "lodash": "3.10.1",
     "react": "0.14.0",
