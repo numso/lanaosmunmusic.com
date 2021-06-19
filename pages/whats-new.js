@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 const newsItems = [
   {
@@ -29,26 +28,18 @@ const newsItems = [
 
 export default function News () {
   return (
-    <div>
+    <div id='whats-new'>
       <h3>What's New</h3>
-      <Body>
+      <p>
         This is the place that I will post new things added to this site. Things
         like new songs, new links, new MP3 tracks, new arrangements, etc.
-      </Body>
+      </p>
       {newsItems.map((news, i) => (
-        <Item key={i}>
+        <div className='item' key={i}>
           <img src='/img/bullet.png' />
           {news.date} - {news.item}
-        </Item>
+        </div>
       ))}
     </div>
   )
 }
-
-const Body = styled.p`
-  padding-top: 10px;
-`
-
-const Item = styled.div`
-  padding: 20px 0;
-`

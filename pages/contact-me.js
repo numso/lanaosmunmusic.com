@@ -1,11 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 
 export default function Contact () {
   return (
-    <div>
+    <div id='contact-me'>
       <h3>Contact Me</h3>
-      <P>
+      <p>
         The best way to get ahold of me is through{' '}
         <a
           target='_blank'
@@ -16,11 +15,7 @@ export default function Contact () {
         </a>
         . Please let me know your name and why you're contacting me. Also, make
         sure to mention "LanaOsmunMusic" in the subject of the email. Thanks!
-      </P>
+      </p>
     </div>
   )
 }
-
-const P = styled.p`
-  padding-top: 20px;
-`

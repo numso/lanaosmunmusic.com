@@ -1,11 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 
 export default function Home () {
   return (
-    <Wrapper>
+    <div id='home'>
       <h3>Downloadable LDS Christian Music</h3>
-      <P>Welcome!!!</P>
+      <p className='centered'>Welcome!!!</p>
       <p>This site contains a variety of music composed by Lana Osmun.</p>
       <p>
         Each song includes downloadable sheet music in PDF format and an MP3 to
@@ -16,18 +15,7 @@ export default function Home () {
         The music on the site is can be easily downloaded and is available for
         non-commercial church and personal use.
       </p>
-      <P>Enjoy the Music!</P>
-    </Wrapper>
+      <p className='centered'>Enjoy the Music!</p>
+    </div>
   )
 }
-
-const Wrapper = styled.div`
-  & p {
-    margin: 20px 0;
-    font-weight: bold;
-  }
-`
-
-const P = styled.p`
-  text-align: center;
-`

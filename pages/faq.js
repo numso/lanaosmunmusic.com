@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 const faqs = [
   {
@@ -48,7 +47,7 @@ const faqs = [
 
 export default function Faq () {
   return (
-    <Wrapper>
+    <div id='faq'>
       <h3>Frequently Asked Questions</h3>
       <p>
         Well, I don't really have that many questions asked of me, but here are
@@ -62,16 +61,6 @@ export default function Faq () {
           </tr>
         ))}
       </table>
-    </Wrapper>
+    </div>
   )
 }
-
-const Wrapper = styled.div`
-  & p {
-    padding: 10px 0;
-  }
-
-  & td {
-    padding: 10px;
-  }
-`

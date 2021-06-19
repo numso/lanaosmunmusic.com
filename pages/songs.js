@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import styled from 'styled-components'
 
 import allSongs from '../data/songs'
 
@@ -28,9 +27,9 @@ export default function List () {
     })
   }
   return (
-    <div>
+    <div id='songs'>
       <h3>Song List</h3>
-      <Controls>
+      <div className='controls'>
         <select value={category} onChange={e => setCategory(e.target.value)}>
           {categories.map(cat => (
             <option key={cat.key || 'default'} value={cat.key}>
@@ -44,45 +43,14 @@ export default function List () {
           value={search}
           onChange={e => setSearch(e.target.value)}
         />
-      </Controls>
+      </div>
       <div>
         {songs.map(song => (
           <Link key={song.id} href={`/song/${song.id}`} passHref>
-            <Song>{song.name}</Song>
+            <a className='song'>{song.name}</a>
           </Link>
         ))}
       </div>
     </div>
   )
 }
-
-const Song = styled.a`
-  background-color: #ce87e9;
-  color: black;
-  cursor: pointer;
-  display: inline-block;
-  margin: 5px 0;
-  padding: 10px 0;
-  padding-left: 20px;
-  text-decoration: none;
-  width: 100%;
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &:hover {
-    background-color: #740099;
-    color: #eae2fb;
-  }
-`
-
-const Controls = styled.div`
-  display: flex;
-  margin: 15px 0;
-
-  & input {
-    flex: 1;
-    margin-left: 10px;
-  }
-`

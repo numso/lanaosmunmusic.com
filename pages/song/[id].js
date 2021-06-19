@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import React from 'react'
-import styled from 'styled-components'
 
 import songs from '../../data/songs'
 
@@ -9,9 +8,9 @@ const download = url => window.open(url, '_blank')
 
 export default function Song ({ id, info, lyrics, name, meta, imgSrc }) {
   return (
-    <Wrapper>
+    <div id='song'>
       <h3>{name}</h3>
-      <Links>
+      <div className='links'>
         <button
           className='btn'
           disabled={!meta.sheetmusic}
@@ -40,18 +39,20 @@ export default function Song ({ id, info, lyrics, name, meta, imgSrc }) {
         >
           Sheet Music SATB
         </button>
-      </Links>
+      </div>
       {meta.img && <img src={imgSrc} />}
-      <Info>{info}</Info>
-      <Title>{name}</Title>
+      <div className='info'>{info}</div>
+      <div className='title'>{name}</div>
       {lyrics.map((verse, i) => (
-        <Verse key={i}>
+        <div className='verse' key={i}>
           {verse.map((line, j) => (
-            <Line key={j}>{line}</Line>
+            <div className='line' key={j}>
+              {line}
+            </div>
           ))}
-        </Verse>
+        </div>
       ))}
-    </Wrapper>
+    </div>
   )
 }
 
@@ -73,35 +74,3 @@ export async function getStaticProps ({ params: { id } }) {
 
   return { props: { ...song, imgSrc } }
 }
-
-const Wrapper = styled.div`
-  & img {
-    float: right;
-    padding: 20px;
-  }
-`
-
-const Links = styled.div`
-  text-align: center;
-  padding-top: 10px;
-`
-
-const Info = styled.div`
-  padding-top: 10px;
-  font-style: italic;
-`
-
-const Title = styled.div`
-  padding-top: 30px;
-  text-align: center;
-  font-size: 20px;
-  clear: both;
-`
-
-const Verse = styled.div`
-  padding-top: 20px;
-`
-
-const Line = styled.div`
-  text-align: center;
-`
