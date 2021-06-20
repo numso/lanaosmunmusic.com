@@ -6,7 +6,6 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <title>Lana Osmun Music</title>
-
           <link
             href='https://fonts.googleapis.com/css2?family=Raleway&display=swap'
             rel='stylesheet'
