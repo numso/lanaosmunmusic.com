@@ -39,7 +39,7 @@ export default function About () {
           </p>
           <ul>
             <li>I was born in Lancaster, California</li>
-            <li>I Currently live in Cedar HIlls, Utah</li>
+            <li>I currently live in Cedar Hills, Utah</li>
             <li>I graduated from both Ricks College and BYU</li>
             <li>I'm learning how to quilt and love it</li>
           </ul>
