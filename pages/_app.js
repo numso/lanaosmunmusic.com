@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import React from 'react'
 
 import '../styles/globals.css'
 
@@ -12,6 +13,10 @@ const nav = [
 ]
 
 export default function App ({ Component, pageProps }) {
+  React.useEffect(() => {
+    const [hash] = window.location.hash.substr(1).split('?_k')
+    if (hash) window.location = hash
+  }, [])
   return (
     <div id='app'>
       <header>

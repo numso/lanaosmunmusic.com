@@ -32,13 +32,13 @@ export default function Song ({ id, info, lyrics, name, meta, img }) {
     <div id='song'>
       <h2>{name}</h2>
       <div className='links'>
-        {buttons.map(button =>
+        {buttons.map((button, i) =>
           meta[button.enabled] ? (
-            <a className='btn' href={button.href(id)} download>
+            <a key={i} className='btn' href={button.href(id)} download>
               {button.label}
             </a>
           ) : (
-            <button className='btn' disabled>
+            <button key={i} className='btn' disabled>
               {button.label}
             </button>
           )
