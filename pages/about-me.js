@@ -61,6 +61,7 @@ export default function About () {
             alt='my husband'
             width={309}
             height={232}
+            loader={({ src }) => src}
           />
         </div>
         <div>

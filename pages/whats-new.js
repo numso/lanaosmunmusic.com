@@ -37,7 +37,13 @@ export default function News () {
       </p>
       {newsItems.map((news, i) => (
         <div className='item' key={i}>
-          <Image src='/img/bullet.png' alt='' width={49} height={19} />
+          <Image
+            src='/img/bullet.png'
+            alt=''
+            width={49}
+            height={19}
+            loader={({ src }) => src}
+          />
           {news.date} - {news.item}
         </div>
       ))}

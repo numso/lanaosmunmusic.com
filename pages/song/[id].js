@@ -48,7 +48,13 @@ export default function Song ({ id, info, lyrics, name, meta, img }) {
         <span>{info}</span>
         {meta.img && (
           <div>
-            <Image src={img.src} alt='' width={img.width} height={img.height} />
+            <Image
+              src={img.src}
+              alt=''
+              width={img.width}
+              height={img.height}
+              loader={({ src }) => src}
+            />
           </div>
         )}
       </div>
