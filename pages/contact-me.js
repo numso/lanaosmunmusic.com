@@ -3,7 +3,7 @@ import React from 'react'
 export default function Contact () {
   return (
     <div id='contact-me'>
-      <h3>Contact Me</h3>
+      <h2>Contact Me</h2>
       <p>
         The best way to get ahold of me is through{' '}
         <a

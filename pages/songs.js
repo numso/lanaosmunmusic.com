@@ -28,7 +28,7 @@ export default function List () {
   }
   return (
     <div id='songs'>
-      <h3>Song List</h3>
+      <h2>Song List</h2>
       <div className='controls'>
         <select value={category} onChange={e => setCategory(e.target.value)}>
           {categories.map(cat => (

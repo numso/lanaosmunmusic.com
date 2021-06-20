@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import '../styles/globals.css'
-import styles from '../styles/main.module.css'
 
 const nav = [
   { label: 'Home', url: '/' },
@@ -12,31 +11,25 @@ const nav = [
   { label: 'Contact Me', url: '/contact-me' }
 ]
 
-export default function MyApp ({ Component, pageProps }) {
+export default function App ({ Component, pageProps }) {
   return (
     <div id='app'>
-      <div>
-        <div className={styles.pad}>
-          <h1 className={styles.title}>Lana Osmun Music</h1>
-        </div>
-        <div className={styles.pad}>
-          <ul className={styles.nav}>
+      <header>
+        <h1>Lana Osmun Music</h1>
+        <nav>
+          <ul>
             {nav.map(item => (
-              <Link key={item.url} href={item.url}>
-                <a>{item.label}</a>
-              </Link>
+              <li key={item.url}>
+                <Link href={item.url}>
+                  <a>{item.label}</a>
+                </Link>
+              </li>
             ))}
           </ul>
-        </div>
-      </div>
-      <div className={styles.view}>
-        <Component {...pageProps} />
-      </div>
-      <div className={styles.pad}>
-        <p className={styles.copyright}>
-          © {new Date().getFullYear()} Lana Osmun
-        </p>
-      </div>
+        </nav>
+      </header>
+      <Component {...pageProps} />
+      <footer>© {new Date().getFullYear()} Lana Osmun</footer>
     </div>
   )
 }

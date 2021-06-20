@@ -7,8 +7,6 @@ export default class MyDocument extends Document {
         <Head>
           <title>Lana Osmun Music</title>
 
-          <link rel='stylesheet' href='/css/lib/bootstrap-btn.css' />
-
           <link
             href='https://fonts.googleapis.com/css2?family=Raleway&display=swap'
             rel='stylesheet'

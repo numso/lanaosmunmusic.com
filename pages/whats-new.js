@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const newsItems = [
@@ -29,14 +30,14 @@ const newsItems = [
 export default function News () {
   return (
     <div id='whats-new'>
-      <h3>What's New</h3>
+      <h2>What's New</h2>
       <p>
         This is the place that I will post new things added to this site. Things
         like new songs, new links, new MP3 tracks, new arrangements, etc.
       </p>
       {newsItems.map((news, i) => (
         <div className='item' key={i}>
-          <img src='/img/bullet.png' />
+          <Image src='/img/bullet.png' alt='' width={49} height={19} />
           {news.date} - {news.item}
         </div>
       ))}

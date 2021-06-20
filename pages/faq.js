@@ -13,7 +13,7 @@ const faqs = [
     question: 'Will you change the key signature for me?',
     answer: (
       <span>
-        Maybe, if I have time.
+        Maybe, if I have time.{' '}
         <a
           target='_blank'
           rel='noreferrer noopener'
@@ -48,7 +48,7 @@ const faqs = [
 export default function Faq () {
   return (
     <div id='faq'>
-      <h3>Frequently Asked Questions</h3>
+      <h2>Frequently Asked Questions</h2>
       <p>
         Well, I don't really have that many questions asked of me, but here are
         a few :)

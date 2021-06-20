@@ -3,7 +3,7 @@ import React from 'react'
 export default function Home () {
   return (
     <div id='home'>
-      <h3>Downloadable LDS Christian Music</h3>
+      <h2>Downloadable LDS Christian Music</h2>
       <p className='centered'>Welcome!!!</p>
       <p>This site contains a variety of music composed by Lana Osmun.</p>
       <p>

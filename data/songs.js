@@ -1,4 +1,4 @@
-export default [
+const songs = [
   {
     id: 'adams-song',
     name: "Adam's Song",
@@ -6,6 +6,9 @@ export default [
       'This song was written for my brother Adam when he went on his mission to Cordoba Argentina. This is the first song I wrote. I was actually trying to write a talk for his farewell and ended up writing this song. I surprised him at his farewell by sing instead of talking.',
     cat: {
       youth: true
+    },
+    image: {
+      height: 87
     },
     meta: {
       img: true,
@@ -298,6 +301,9 @@ export default [
       child: true,
       youth: true
     },
+    image: {
+      width: 88
+    },
     meta: {
       img: true,
       mp3: true,
@@ -448,12 +454,16 @@ export default [
     id: 'i-wonder-duet',
     name: 'I Wonder Duet',
     info:
-      'A friend called and told me that her children were asked to sing in Sacrament meeting. THey wanted a different version of this song so I wrote this duet for them to sing.',
+      'A friend called and told me that her children were asked to sing in Sacrament meeting. They wanted a different version of this song so I wrote this duet for them to sing.',
     cat: {
       child: true,
       youth: true,
       women: true,
       duet: true
+    },
+    image: {
+      width: 106,
+      height: 86
     },
     meta: {
       img: true,
@@ -1254,3 +1264,5 @@ export default [
     ]
   }
 ]
+
+export default songs

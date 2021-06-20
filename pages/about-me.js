@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const actions = [
@@ -29,7 +30,7 @@ export default function About () {
 
   return (
     <div id='about-me'>
-      <h3>About Me</h3>
+      <h2>About Me</h2>
 
       <div className='section'>
         <div>
@@ -43,11 +44,25 @@ export default function About () {
             <li>I'm learning how to quilt and love it</li>
           </ul>
         </div>
-        <img src='/img/family.jpg' />
+        <div>
+          <Image
+            src='/img/family.jpg'
+            alt='my family'
+            width={309}
+            height={207}
+          />
+        </div>
       </div>
 
       <div className='section'>
-        <img src='/img/husband.jpg' />
+        <div>
+          <Image
+            src='/img/husband.jpg'
+            alt='my husband'
+            width={309}
+            height={232}
+          />
+        </div>
         <div>
           <ul>
             <li>I married John Osmun in the Los Angeles Temple</li>
