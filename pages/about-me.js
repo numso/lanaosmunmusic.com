@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import React from 'react'
 
 const actions = [
@@ -45,23 +45,17 @@ export default function About () {
           </ul>
         </div>
         <div>
-          <Image
-            src='/img/family.jpg'
-            alt='my family'
-            width={309}
-            height={207}
-          />
+          <img src='/img/family.jpg' alt='my family' width={309} height={207} />
         </div>
       </div>
 
       <div className='section'>
         <div>
-          <Image
+          <img
             src='/img/husband.jpg'
             alt='my husband'
             width={309}
             height={232}
-            loader={({ src }) => src}
           />
         </div>
         <div>

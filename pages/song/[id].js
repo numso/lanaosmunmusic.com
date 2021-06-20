@@ -1,5 +1,5 @@
 import fs from 'fs'
-import Image from 'next/image'
+// import Image from 'next/image'
 import path from 'path'
 import React from 'react'
 
@@ -48,13 +48,7 @@ export default function Song ({ id, info, lyrics, name, meta, img }) {
         <span>{info}</span>
         {meta.img && (
           <div>
-            <Image
-              src={img.src}
-              alt=''
-              width={img.width}
-              height={img.height}
-              loader={({ src }) => src}
-            />
+            <img src={img.src} alt='' width={img.width} height={img.height} />
           </div>
         )}
       </div>

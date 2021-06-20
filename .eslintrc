@@ -3,6 +3,7 @@
   "extends": ["next", "next/core-web-vitals", "standard", "standard-jsx"],
   "rules": {
     "multiline-ternary": "off",
-    "@next/next/no-title-in-document-head": "off"
+    "@next/next/no-title-in-document-head": "off",
+    "@next/next/no-img-element": "off"
   }
 }

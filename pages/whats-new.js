@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import React from 'react'
 
 const newsItems = [
@@ -37,13 +37,7 @@ export default function News () {
       </p>
       {newsItems.map((news, i) => (
         <div className='item' key={i}>
-          <Image
-            src='/img/bullet.png'
-            alt=''
-            width={49}
-            height={19}
-            loader={({ src }) => src}
-          />
+          <img src='/img/bullet.png' alt='' width={49} height={19} />
           {news.date} - {news.item}
         </div>
       ))}
