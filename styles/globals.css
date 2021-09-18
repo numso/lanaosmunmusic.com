@@ -105,6 +105,11 @@ ul {
 #app > div {
   padding: 10px 90px;
 }
+@media (max-width: 768px) {
+  #app > div {
+    padding: 10px;
+  }
+}
 
 nav {
   margin: 20px 0 10px;
@@ -116,6 +121,7 @@ nav {
 nav ul {
   background-color: #ce87e9;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 nav a {
@@ -184,7 +190,15 @@ footer {
 }
 #songs .controls input {
   flex: 1;
-  margin-left: 10px;
+  margin: 0 0 0 10px;
+}
+@media (max-width: 768px) {
+  #songs .controls {
+    flex-direction: column;
+  }
+  #songs .controls input {
+    margin: 10px 0 0 0;
+  }
 }
 #songs .song {
   background-color: #ce87e9;
@@ -262,6 +276,24 @@ footer {
 }
 #about-me > .section > :last-child {
   padding-left: 16px;
+}
+#about-me img {
+  width: initial;
+  height: initial;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  #about-me > .section {
+    flex-direction: column;
+  }
+  #about-me > .section:last-of-type {
+    flex-direction: column-reverse;
+  }
+  #about-me > .section > * {
+    text-align: center;
+    width: 100%;
+    padding: 0 !important;
+  }
 }
 
 #faq p {
